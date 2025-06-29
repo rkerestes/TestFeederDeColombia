@@ -2,20 +2,38 @@ new wiredata.4/0_ACSR
 ~ diam = 14.30 radunits = mm 
 ~ gmr = 0.002481 gmrunits = m 
 ~ rac = 0.3678 runits = km 
+~ normamps = 350 emergamps = 435
 
 new wiredata.1/0_ACSR
 ~ diam = 10.11 radunits = mm 
 ~ gmr = 0.001359 gmrunits = m 
 ~ rac = 0.6962 runits = km 
+~ normamps = 230 emergamps = 290
 
-! THREE-PHASE OVERHEAD LINE CONFIGURATION
+! THREE-PHASE OVERHEAD LINE CONFIGURATION (13.2 kV)
+! Phase A (x=0), Phase B (x=0.85), Phase C (x=1.7), Neutral (x=0.85, h=5)
 new linegeometry.13kV nconds=4 nphase=3 units=m
 ~ cond=1 wire=4/0_ACSR x=0 h=8
 ~ cond=2 wire=4/0_ACSR x=0.85 h=8
 ~ cond=3 wire=4/0_ACSR x=1.7 h=8
-~ cond=4 wire=1/0_ACSR x=0.65 h=6
+~ cond=4 wire=1/0_ACSR x=0.85 h=5
+
 
 ! SINGLE PHASE OVERHEAD LINE CONFIGURATION
 new linegeometry.7kV nconds=2 nphase=1 units=m
 ~ cond=1 wire=4/0_ACSR x=0 h=8
 ~ cond=2 wire=1/0_ACSR x=0 h=6
+
+! LINES FOR MAIN FEEDER 
+New Line.Sub13_Main03  Bus1=Main02.1.2.3  Bus2=Main03.1.2.3  Phases=3  Geometry=13kV  Length=0.3 Units=km
+New Line.Main03_Main04 Bus1=Main03.1.2.3 Bus2=Main04.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main04_Main05 Bus1=Main04.1.2.3 Bus2=Main05.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main05_Main06 Bus1=Main05.1.2.3 Bus2=Main06.1.2.3 Phases=3  Geometry=13kV  Length=0.3 Units=km
+New Line.Main06_Main07 Bus1=Main06.1.2.3 Bus2=Main07.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main07_Main08 Bus1=Main07.1.2.3 Bus2=Main08.1.2.3 Phases=3  Geometry=13kV  Length=0.15 Units=km
+New Line.Main08_Main09 Bus1=Main08.1.2.3 Bus2=Main09.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main09_Main10 Bus1=Main09.1.2.3 Bus2=Main10.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main10_Main11 Bus1=Main10.1.2.3 Bus2=Main11.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main11_Main12 Bus1=Main11.1.2.3 Bus2=Main12.1.2.3 Phases=3  Geometry=13kV  Length=0.2 Units=km
+New Line.Main12_Main13 Bus1=Main12.1.2.3 Bus2=Main13.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main13_Main14 Bus1=Main13.1.2.3 Bus2=Main14.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
