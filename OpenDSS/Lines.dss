@@ -37,3 +37,30 @@ New Line.Main10_Main11 Bus1=Main10.1.2.3 Bus2=Main11.1.2.3 Phases=3  Geometry=13
 New Line.Main11_Main12 Bus1=Main11.1.2.3 Bus2=Main12.1.2.3 Phases=3  Geometry=13kV  Length=0.2 Units=km
 New Line.Main12_Main13 Bus1=Main12.1.2.3 Bus2=Main13.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
 New Line.Main13_Main14 Bus1=Main13.1.2.3 Bus2=Main14.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+
+! LINES FOR LATERAL A
+
+New Line.Main05_LatA15 Bus1=Main05.1.2.3 Bus2=LatA15.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatA15_LatA16 Bus1=LatA15.1.2.3 Bus2=LatA16.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatA16_LatA17 Bus1=LatA16.1.2.3 Bus2=LatA17.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatA17_LatA18 Bus1=LatA17.1.2.3 Bus2=LatA18.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+
+! LINES FOR LATERAL C
+New Line.Main07_LatC25 Bus1=Main07.1.2.3 Bus2=LatC25.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatC25_LatC26 Bus1=LatC25.1.2.3 Bus2=LatC26.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatC26_LatC27 Bus1=LatC26.1.2.3 Bus2=LatC27.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatC27_LatC28 Bus1=LatC27.1.2.3 Bus2=LatC28.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatC28_LatC29 Bus1=LatC28.1.2.3 Bus2=LatC29.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatC29_LatC30 Bus1=LatC29.1.2.3 Bus2=LatC30.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+
+! LINES FOR LATERAL D
+New Line.Main09_LatD31 Bus1=Main09.1.2.3 Bus2=LatD31.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD31_LatD32 Bus1=LatD31.1.2.3 Bus2=LatD32.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD32_LatD33 Bus1=LatD32.1.2.3 Bus2=LatD33.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD33_LatD34 Bus1=LatD33.1.2.3 Bus2=LatD34.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD34_LatD35 Bus1=LatD34.1.2.3 Bus2=LatD35.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD35_LatD36 Bus1=LatD35.1.2.3 Bus2=LatD36.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD36_LatD37 Bus1=LatD36.1.2.3 Bus2=LatD37.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD37_LatD38 Bus1=LatD37.1.2.3 Bus2=LatD38.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD38_LatD39 Bus1=LatD38.1.2.3 Bus2=LatD39.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
+New Line.LatD39_LatD40 Bus1=LatD39.1.2.3 Bus2=LatD40.1.2.3 Phases=3 Geometry=13kV Length=0.1 Units=km
