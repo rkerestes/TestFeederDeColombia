@@ -1,6 +1,11 @@
 Clear 
 new circuit.ColTestCKT
-~ basekv=115 pu=1.0000 phases=3 bus1=SourceBus  
+~ basekv=115 pu=1.0000 phases=3 bus1=Main01
 
+redirect Transformers.dss
 redirect Lines.dss
 redirect Loads.dss
+
+Set Voltagebases=[115, 13.2]
+calcv
+Solve
