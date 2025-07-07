@@ -1,0 +1,10 @@
+! DEFINING PV DER PLANT
+New PVSystem.PV_Main12 Bus1=Main12.1.2.3 Phases=3 kV=13.2 kVA=2000
+~ pf=1.0 Conn=wye
+~ irradiance=1.0
+~ Pmpp=2000
+~ %Pmpp=100
+~ temperature=25
+~ model=1
+~ Vminpu=0.9
+~ Vmaxpu=1.1
