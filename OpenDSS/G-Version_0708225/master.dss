@@ -22,4 +22,4 @@ Solve
 buscoords BusCoords.dss
 GISCoords GISCoords.dss
 
-plot circuit
+!plot circuit
