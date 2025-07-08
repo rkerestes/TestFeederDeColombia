@@ -1,0 +1,14 @@
+! Phase A regulator
+New Transformer.RegA phases=1 bank=Main08_RegBank XHL=0.01 kVAs=[1666 1666]
+~ Buses=[Main08.1 Main08RG.1] kVs=[13.2 13.2] %LoadLoss=0.01
+New RegControl.RegA transformer=RegA winding=2 vreg=120 band=2 ptratio=110 ctprim=700 R=3 X=9
+
+! Phase B regulator
+New Transformer.RegB phases=1 bank=Main08_RegBank XHL=0.01 kVAs=[1666 1666]
+~ Buses=[Main08.2 Main08RG.2] kVs=[13.2 13.2] %LoadLoss=0.01
+New RegControl.RegB transformer=RegB winding=2 vreg=120 band=2 ptratio=110 ctprim=700 R=3 X=9
+
+! Phase C regulator
+New Transformer.RegC phases=1 bank=Main08_RegBank XHL=0.01 kVAs=[1666 1666]
+~ Buses=[Main08.3 Main08RG.3] kVs=[13.2 13.2] %LoadLoss=0.01
+New RegControl.RegC transformer=RegC winding=2 vreg=120 band=2 ptratio=110 ctprim=700 R=3 X=9

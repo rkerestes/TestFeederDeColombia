@@ -1,0 +1,8 @@
+! DEFINING TRANSFORMERS
+new transformer.Sub_Xfmr phases=3 windings=2
+~ buses=[Main01, Main02]
+~ conns=[delta, wye]
+~ kvs=[66, 13.2]
+~ kvas=[30000, 30000]
+~ %Rs=[0.2, 0.2]
+~ Xhl=8
