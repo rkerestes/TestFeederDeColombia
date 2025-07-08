@@ -18,3 +18,8 @@ Set Voltagebases=[66, 13.2]
 calcv
 
 Solve
+
+buscoords BusCoords.dss
+GISCoords GISCoords.dss
+
+plot circuit
