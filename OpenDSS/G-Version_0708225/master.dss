@@ -2,7 +2,7 @@ Clear
 
 set defaultbasefrequency=60
 
-new circuit.ColTestCKT basekv=66 pu=1.0010 phases=3 bus1=Main01
+new circuit.ColTestCKT basekv=33 pu=1.045 phases=3 bus1=Main01
 
 redirect Transformers.dss
 redirect Regulators.dss
@@ -14,8 +14,10 @@ redirect DER.dss
 new energymeter.FH element=transformer.Sub_Xfmr terminal=1
 set earthmodel=Deri
 
-Set Voltagebases=[66, 13.2]
+Set Voltagebases=[33, 11.4]
 calcv
+
+set maxcontroliter=50
 
 Solve
 
