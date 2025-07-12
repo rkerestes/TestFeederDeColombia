@@ -1,0 +1,43 @@
+! --- Main line ---
+New Load.Main03  Bus1=Main03.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.Main04  Bus1=Main04.2   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.Main06  Bus1=Main06.3   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.Main07  Bus1=Main07.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=1000  kvar=500
+New Load.Main09  Bus1=Main09.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.Main11  Bus1=Main11.2.3  Phases=2 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.Main12  Bus1=Main12.3   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.Main13  Bus1=Main13.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+
+! --- Lateral A ---
+New Load.LatA15  Bus1=LatA15.2   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatA16  Bus1=LatA16.3   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatA17  Bus1=LatA17.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatA18  Bus1=LatA18.2   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+
+! --- Lateral B ---
+New Load.LatB19  Bus1=LatB19.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.LatB20  Bus1=LatB20.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.LatB21  Bus1=LatB21.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.LatB22  Bus1=LatB22.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=1000  kvar=500
+New Load.LatB23  Bus1=LatB23.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=1000  kvar=500
+New Load.LatB24  Bus1=LatB24.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=1000  kvar=500
+
+! --- Lateral C ---
+New Load.LatC25  Bus1=LatC25.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatC26  Bus1=LatC26.2   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatC27  Bus1=LatC27.3   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatC28  Bus1=LatC28.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.LatC29  Bus1=LatC29.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.LatC30  Bus1=LatC30.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=3000  kvar=1800
+
+! --- Lateral D ---
+New Load.LatD31  Bus1=LatD31.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatD32  Bus1=LatD32.2   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatD33  Bus1=LatD33.3   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatD34  Bus1=LatD34.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatD35  Bus1=LatD35.2   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatD36  Bus1=LatD36.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=3000  kvar=1800
+New Load.LatD37  Bus1=LatD37.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=3000  kvar=1800
+New Load.LatD38  Bus1=LatD38.1.2.3  Phases=3 Conn=Wye  Model=1  kV=13.2  kW=800  kvar=400
+New Load.LatD39  Bus1=LatD39.3   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200
+New Load.LatD40  Bus1=LatD40.1   Phases=1 Conn=Wye  Model=1  kV=7.62  kW=400  kvar=200

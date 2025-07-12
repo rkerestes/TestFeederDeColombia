@@ -1,0 +1,88 @@
+! CONFIGURING OVERHEAD AND UNDERGROUND CABLE DATA
+new wiredata.4/0_ACSR 
+~ diam = 14.30 radunits = mm 
+~ gmr = 0.002481 gmrunits = m 
+~ rac = 0.3678 runits = km 
+~ normamps = 350 emergamps = 435
+
+new wiredata.1/0_ACSR
+~ diam = 10.11 radunits = mm 
+~ gmr = 0.001359 gmrunits = m 
+~ rac = 0.6962 runits = km 
+~ normamps = 230 emergamps = 290
+
+
+new CNData.UG_4_0_XLPE k=6 DiaStrand=3.18 Rstrand=2.0 epsR=2.3
+~ InsLayer=4.45 DiaIns=21.91 DiaCable=34.5 Rac=0.1362 GMRac=0.001 diam=13.01
+~ Runits=km Radunits=mm GMRunits=m
+
+
+! THREE-PHASE OVERHEAD LINE CONFIGURATION (13.2 kV)
+! Phase A (x=0), Phase B (x=0.85), Phase C (x=1.7), Neutral (x=0.85, h=5)
+new linegeometry.13kV nconds=4 nphase=3 units=m
+~ cond=1 wire=4/0_ACSR x=0 h=8
+~ cond=2 wire=4/0_ACSR x=0.85 h=8
+~ cond=3 wire=4/0_ACSR x=1.7 h=8
+~ cond=4 wire=1/0_ACSR x=0.85 h=5
+
+
+! SINGLE PHASE OVERHEAD LINE CONFIGURATION
+new linegeometry.7kV nconds=2 nphase=1 units=m
+~ cond=1 wire=4/0_ACSR x=0 h=8
+~ cond=2 wire=1/0_ACSR x=0 h=6
+
+! THREE-PHASE UNDERGROUND LINE CONFIGURATION (13.2 kV)
+New LineGeometry.UG_4_0_Geom nconds=3 nphases=3 units=m
+~ cond=1 cncable=UG_4_0_XLPE x=0.0   h=0.0
+~ cond=2 cncable=UG_4_0_XLPE x=0.045 h=0.0
+~ cond=3 cncable=UG_4_0_XLPE x=0.09  h=0.0
+
+! LINES FOR MAIN FEEDER 
+New Line.Sub13_Main03  Bus1=Main02.1.2.3  Bus2=Main03.1.2.3  Phases=3  Geometry=13kV  Length=0.3 Units=km
+New Line.Main03_Main04 Bus1=Main03.1.2.3 Bus2=Main04.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main04_Main05 Bus1=Main04.1.2.3 Bus2=Main05.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main05_Main06 Bus1=Main05.1.2.3 Bus2=Main06.1.2.3 Phases=3  Geometry=13kV  Length=0.3 Units=km
+New Line.Main06_Main07 Bus1=Main06.1.2.3 Bus2=Main07.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main07_Main08 Bus1=Main07.1.2.3 Bus2=Main08.1.2.3 Phases=3  Geometry=13kV  Length=0.15 Units=km
+New Line.Main08_Main09 Bus1=Main08RG.1.2.3 Bus2=Main09.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main09_Main10 Bus1=Main09.1.2.3 Bus2=Main10.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main10_Main11 Bus1=Main10.1.2.3 Bus2=Main11.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main11_Main12 Bus1=Main11.1.2.3 Bus2=Main12.1.2.3 Phases=3  Geometry=13kV  Length=0.2 Units=km
+New Line.Main12_Main13 Bus1=Main12.1.2.3 Bus2=Main13.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+New Line.Main13_Main14 Bus1=Main13.1.2.3 Bus2=Main14.1.2.3 Phases=3  Geometry=13kV  Length=0.25 Units=km
+
+
+! LINES FOR LATERAL A
+
+New Line.Main05_LatA15 Bus1=Main05.1.2.3 Bus2=LatA15.1.2.3 Phases=3 Geometry=13kV Length=0.096 Units=km
+New Line.LatA15_LatA16 Bus1=LatA15.1.2.3 Bus2=LatA16.1.2.3 Phases=3 Geometry=13kV Length=0.103 Units=km
+New Line.LatA16_LatA17 Bus1=LatA16.1.2.3 Bus2=LatA17.1.2.3 Phases=3 Geometry=13kV Length=0.07 Units=km
+New Line.LatA17_LatA18 Bus1=LatA17.1.2.3 Bus2=LatA18.1.2.3 Phases=3 Geometry=13kV Length=0.13 Units=km
+
+! LINES FOR LATERAL B 
+New Line.Main06_LatB19 Bus1=Main06.1.2.3 Bus2=LatB19.1.2.3 Phases=3 Geometry=UG_4_0_Geom Length=0.119 Units=km
+New Line.LatB19_LatB20 Bus1=LatB19.1.2.3 Bus2=LatB20.1.2.3 Phases=3 Geometry=UG_4_0_Geom Length=0.078 Units=km
+New Line.LatB20_LatB21 Bus1=LatB20.1.2.3 Bus2=LatB21.1.2.3 Phases=3 Geometry=UG_4_0_Geom Length=0.13 Units=km
+New Line.LatB21_LatB22 Bus1=LatB21.1.2.3 Bus2=LatB22.1.2.3 Phases=3 Geometry=UG_4_0_Geom Length=0.129 Units=km
+New Line.LatB22_LatB23 Bus1=LatB22.1.2.3 Bus2=LatB23.1.2.3 Phases=3 Geometry=UG_4_0_Geom Length=0.128 Units=km
+New Line.LatB23_LatB24 Bus1=LatB23.1.2.3 Bus2=LatB24.1.2.3 Phases=3 Geometry=UG_4_0_Geom Length=0.127 Units=km
+
+! LINES FOR LATERAL C
+New Line.Main07_LatC25 Bus1=Main07.1.2.3 Bus2=LatC25.1.2.3 Phases=3 Geometry=13kV Length=0.121 Units=km
+New Line.LatC25_LatC26 Bus1=LatC25.1.2.3 Bus2=LatC26.1.2.3 Phases=3 Geometry=13kV Length=0.13 Units=km
+New Line.LatC26_LatC27 Bus1=LatC26.1.2.3 Bus2=LatC27.1.2.3 Phases=3 Geometry=13kV Length=0.11 Units=km
+New Line.LatC27_LatC28 Bus1=LatC27.1.2.3 Bus2=LatC28.1.2.3 Phases=3 Geometry=13kV Length=0.114 Units=km
+New Line.LatC28_LatC29 Bus1=LatC28.1.2.3 Bus2=LatC29.1.2.3 Phases=3 Geometry=13kV Length=0.107 Units=km
+New Line.LatC29_LatC30 Bus1=LatC29.1.2.3 Bus2=LatC30.1.2.3 Phases=3 Geometry=13kV Length=0.08 Units=km
+
+! LINES FOR LATERAL D
+New Line.Main09_LatD31 Bus1=Main09.1.2.3 Bus2=LatD31.1.2.3 Phases=3 Geometry=13kV Length=0.098 Units=km
+New Line.LatD31_LatD32 Bus1=LatD31.1.2.3 Bus2=LatD32.1.2.3 Phases=3 Geometry=13kV Length=0.125 Units=km
+New Line.LatD32_LatD33 Bus1=LatD32.1.2.3 Bus2=LatD33.1.2.3 Phases=3 Geometry=13kV Length=0.13 Units=km
+New Line.LatD33_LatD34 Bus1=LatD33.1.2.3 Bus2=LatD34.1.2.3 Phases=3 Geometry=13kV Length=0.086 Units=km
+New Line.LatD34_LatD35 Bus1=LatD34.1.2.3 Bus2=LatD35.1.2.3 Phases=3 Geometry=13kV Length=0.093 Units=km
+New Line.LatD35_LatD36 Bus1=LatD35.1.2.3 Bus2=LatD36.1.2.3 Phases=3 Geometry=13kV Length=0.075 Units=km
+New Line.LatD36_LatD37 Bus1=LatD36.1.2.3 Bus2=LatD37.1.2.3 Phases=3 Geometry=13kV Length=0.07 Units=km
+New Line.LatD37_LatD38 Bus1=LatD37.1.2.3 Bus2=LatD38.1.2.3 Phases=3 Geometry=13kV Length=0.07 Units=km
+New Line.LatD38_LatD39 Bus1=LatD38.1.2.3 Bus2=LatD39.1.2.3 Phases=3 Geometry=13kV Length=0.107 Units=km
+New Line.LatD39_LatD40 Bus1=LatD39.1.2.3 Bus2=LatD40.1.2.3 Phases=3 Geometry=13kV Length=0.07 Units=km

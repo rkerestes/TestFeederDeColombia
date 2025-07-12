@@ -2,7 +2,7 @@
 new transformer.Sub_Xfmr phases=3 windings=2
 ~ buses=[Main01, Main02]
 ~ conns=[delta, wye]
-~ kvs=[34.5, 11.4]
+~ kvs=[115, 13.2]
 ~ kvas=[30000, 30000]
 ~ %Rs=[0.2, 0.2]
 ~ Xhl=8

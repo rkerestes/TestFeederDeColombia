@@ -1,0 +1,51 @@
+Clear 
+
+set defaultbasefrequency=60
+
+new circuit.ColTestCKT basekv=34.5 pu=1.045 phases=3 bus1=Main01
+
+redirect Transformers.dss
+redirect Regulators_OpenDelta.dss
+!redirect Regulators.dss
+redirect Lines.dss
+redirect Loads.dss
+redirect Capacitors.dss
+redirect DER.dss
+
+new energymeter.FH element=transformer.Sub_Xfmr terminal=1
+set earthmodel=Deri
+
+Set Voltagebases=[34.5, 11.4]
+calcv
+
+Solve
+
+buscoords BusCoords.dss
+GISCoords GISCoords.dss
+
+/*
+
+Set mode=snapshot
+Set maxiter=50
+Set maxcontroliter=30
+Solve
+
+sample meters
+
+solve mode=fault
+Show Fault
+
+Set MarkTransformers=Yes
+Set MarkCapacitors=Yes
+Set MarkRelays=Yes
+Set MarkReclosers=Yes
+Set MarkFuses=Yes
+Set MarkSwitches=Yes
+
+
+Plot profile phases=all
+Plot profile phases=LLall
+Plot circuit Power max=2000 n n C1=$00FF0000
+Plot zones Power max=2000 labels=n subs=y C1=$00FF0000
+
+*/

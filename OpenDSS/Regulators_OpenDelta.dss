@@ -1,0 +1,17 @@
+
+// 1-phase Autos
+new transformer.RegAB_TypeA phases=1 conns=[delta, delta] 
+~ buses=[Main08.1.4, Main08.7.1] kVs=[11.4, 1.14] 
+~ kVAs=[1e6, 1e6] wdg=2 mintap=-1.0 maxtap=1.0 tap=0.0
+new transformer.RegCB_TypeA phases=1 conns=[delta, delta] 
+~ buses=[Main08.3.6, Main08.9.3] kVs=[11.4, 1.14] 
+~ kVAs=[1e6, 1e6] wdg=2 mintap=-1.0 maxtap=1.0 tap=0.0
+
+// Jumpers
+new reactor.jumper_Lbushings phases=2 bus1=Main08.7.9 bus2=Main08RG.1.3 R=0.000001 X=0.0
+new reactor.jumper_PhaseB phases=1 bus1=Main08.2 bus2=Main08RG.2 R=0.000001 X=0.0
+new reactor.jumpers_SL_to_B phases=2 bus1=Main08.4.6 bus2=Main08.2.2 R=0.000001 X=0.0
+
+// Controllers
+new regcontrol.RegAB_TypeA transformer=RegAB_TypeA vreg=123.0 PTratio=95 Bus=Main08RG.1.2 winding=2 
+new regcontrol.RegCB_TypeA transformer=RegCB_TypeA vreg=123.0 PTratio=95 Bus=Main08RG.3.2 winding=2
