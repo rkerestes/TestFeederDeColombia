@@ -36,7 +36,7 @@ New LineGeometry.UG_4_0_Geom nconds=3 nphases=3 units=m
 ~ cond=3 cncable=UG_4_0_XLPE x=0.09  h=0.0
 
 ! LINES FOR MAIN FEEDER 
-New Line.Sub13_Main03  Bus1=Main02.1.2.3  Bus2=Main03.1.2.3  Phases=3  Geometry=11_4kV  Length=0.3 Units=km
+New Line.Main02_Main03  Bus1=Main02.1.2.3  Bus2=Main03.1.2.3  Phases=3  Geometry=11_4kV  Length=0.3 Units=km
 New Line.Main03_Main04 Bus1=Main03.1.2.3 Bus2=Main04.1.2.3 Phases=3  Geometry=11_4kV  Length=0.25 Units=km
 New Line.Main04_Main05 Bus1=Main04.1.2.3 Bus2=Main05.1.2.3 Phases=3  Geometry=11_4kV  Length=0.25 Units=km
 New Line.Main05_Main06 Bus1=Main05.1.2.3 Bus2=Main06.1.2.3 Phases=3  Geometry=11_4kV  Length=0.3 Units=km
